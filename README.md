@@ -32,7 +32,7 @@ Corvex/
 │   └── main.py          # Punto de entrada del microservicio
 ├── knowledge_base.json   
 └──  unanswered_questions.log     
-.env                 # API key de OpenAI
+.env                 
 requirements.txt     # Dependencias del proyecto
 README.md            # Documentación del proyecto
 ```
