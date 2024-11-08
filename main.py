@@ -6,6 +6,9 @@ import torch
 import os
 import json
 import spacy
+import firebase_admin
+from firebase_admin import credentials, firestore
+from datetime import datetime
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
@@ -13,7 +16,9 @@ load_dotenv()
 # Ruta de la base de conocimiento y el registro de preguntas sin respuesta, configurada en .env
 KNOWLEDGE_BASE_PATH = os.getenv("KNOWLEDGE_BASE_PATH", "knowledge_base.json")
 UNANSWERED_LOG_PATH = os.getenv("UNANSWERED_LOG_PATH", "unanswered_questions.log")
-
+CRED_PATH = os.getenv("FIREBASE_CREDENTIALS_PATH")
+cred = credentials.Certificate(CRED_PATH)
+firebase_admin.initialize_app(cred)
 # Inicializar la aplicación de FastAPI
 app = FastAPI()
 
@@ -22,6 +27,8 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Inicializar spaCy para preprocesamiento en español
 nlp = spacy.load("es_core_news_sm")
+
+db = firestore.client()
 
 # Función de preprocesamiento para normalizar la pregunta del usuario
 def preprocess_text(text):
@@ -45,8 +52,14 @@ class ChatRequest(BaseModel):
 
 # Función para registrar preguntas sin respuesta en un archivo de log
 def log_unanswered_question(question):
-    with open(UNANSWERED_LOG_PATH, "a") as f:
-        f.write(question + "\n")
+    # Crear una referencia a la collección
+    unanswered_questions_ref = db.collection("unansuered_questions")
+
+    # Agregar un nuevo documento con la pregunta y la fecha
+    unanswered_questions_ref.document().set({
+            "question": question,
+            "timestamp": datetime.now()
+        })
 
 # Endpoint principal del chatbot
 @app.post("/corvex/chat")
@@ -87,3 +100,12 @@ async def add_to_knowledge_base(question: str, answer: str):
 @app.get("/")
 async def root():
     return {"message": "Bienvenido a Corvex - Chatbot de Santiago"}
+
+@app.get("/corvex/unanswered_questions")
+async def get_unanswered_questions():
+    unanswered_questions_ref = db.collection("unansuered_questions")
+    docs = unanswered_questions_ref.stream()
+
+    unanswered_questions = [{"id": doc.id, **doc.to_dict()} for doc in docs]
+
+    return {"unanswered_questions": unanswered_questions}
