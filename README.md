@@ -29,13 +29,12 @@
 ```plaintext
 Corvex/
 ├── app/
-│   ├── main.py          # Punto de entrada del microservicio
-│   ├── routes.py        # Rutas de API
-│   ├── services.py      # Lógica principal de interacción con OpenAI
-│   └── utils.py         # Funciones auxiliares
-├── .env                 # API key de OpenAI
-├── requirements.txt     # Dependencias del proyecto
-└── README.md            # Documentación del proyecto
+│   └── main.py          # Punto de entrada del microservicio
+├── knowledge_base.json   
+└──  unanswered_questions.log     
+.env                 # API key de OpenAI
+requirements.txt     # Dependencias del proyecto
+README.md            # Documentación del proyecto
 ```
 ---
 
