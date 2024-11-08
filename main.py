@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer, util
 from dotenv import load_dotenv
@@ -16,8 +16,17 @@ load_dotenv()
 # Ruta de la base de conocimiento y el registro de preguntas sin respuesta, configurada en .env
 KNOWLEDGE_BASE_PATH = os.getenv("KNOWLEDGE_BASE_PATH", "knowledge_base.json")
 UNANSWERED_LOG_PATH = os.getenv("UNANSWERED_LOG_PATH", "unanswered_questions.log")
-CRED_PATH = os.getenv("FIREBASE_CREDENTIALS_PATH")
-cred = credentials.Certificate(CRED_PATH)
+
+# Cargar el contenido JSON de las credenciales de Firebase desde la variable de entorno
+firebase_credentials_json = os.getenv("FIREBASE_CREDENTIALS_JSON")
+temp_cred_path = "(/temp/firebase_credentials.json)"
+
+# Crear el archivo temporal de credenciales
+with open(temp_cred_path, "w") as f:
+    f.write(firebase_credentials_json)
+
+# Inicializar Firebase con el archivo temporal de credenciales
+cred = credentials.Certificate(temp_cred_path)
 firebase_admin.initialize_app(cred)
 
 # Inicializar la aplicación de FastAPI
