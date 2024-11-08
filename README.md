@@ -11,7 +11,6 @@
 
 - **Interacción en tiempo real**: Corvex permite a los usuarios realizar preguntas sobre el perfil y proyectos de Santiago, proporcionando respuestas precisas y personalizadas.
 - **Microservicio Independiente**: Diseñado como un servicio desacoplado, permitiendo fácil integración con otros sistemas o aplicaciones futuras.
-- **API de OpenAI**: Aprovecha el poder de la IA para ofrecer respuestas contextualizadas y relevantes en cada interacción.
 - **Fácil Configuración y Escalabilidad**: Estructurado para futuras expansiones, permitiendo incorporar nuevas funcionalidades con mínimo impacto.
 
 ---
@@ -20,7 +19,6 @@
 
 - **Python** - Backend del chatbot.
 - **FastAPI** - Para crear el microservicio y gestionar las rutas de la API.
-- **OpenAI API** - Para generar respuestas basadas en IA.
 
 ---
 
