@@ -19,7 +19,7 @@ UNANSWERED_LOG_PATH = os.getenv("UNANSWERED_LOG_PATH", "unanswered_questions.log
 
 # Cargar el contenido JSON de las credenciales de Firebase desde la variable de entorno
 firebase_credentials_json = os.getenv("FIREBASE_CREDENTIALS_JSON")
-temp_cred_path = "(/temp/firebase_credentials.json)"
+temp_cred_path = "tmp/firebase_credentials.json"
 
 # Crear el archivo temporal de credenciales
 with open(temp_cred_path, "w") as f:
