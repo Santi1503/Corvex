@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9+-brightgreen.svg)](https://www.python.org/)
 
-> **Corvex** es un chatbot interactivo diseñado como microservicio para proporcionar información en tiempo real sobre el perfil profesional de Santiago Gómez de la Torre Romero. A través de la API de OpenAI, Corvex responde preguntas sobre proyectos, contacto y otros temas relevantes en su página profesional.
+> **Corvex** es un chatbot interactivo diseñado como microservicio para proporcionar información en tiempo real sobre el perfil profesional de Santiago Gómez de la Torre Romero. Corvex responde preguntas sobre proyectos, contacto y otros temas relevantes en su página profesional.
 
 ---
 
