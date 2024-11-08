@@ -1,0 +1,24 @@
+{
+  "FAQs": [
+    {
+      "question": "¿Cuáles son los proyectos más importantes de Santiago?",
+      "answer": "Mis proyectos más importantes son su colección de proyectos de Python y su página de perfil profesional"
+    },
+    {
+      "question": "¿Cuál es la experiencia profesional de Santiago?",
+      "answer": "Santiago cuenta con experiencia en IT, desarrollo web y desarrollo de aplicaciones."
+    },
+    {
+      "question": "¿Cómo puedo contactar a Santiago?",
+      "answer": "Puedes contactarme a través de mi página de LinkedIn o por correo electrónico."
+    },
+    {
+      "question": "¿Dónde puedo ver los proyectos de Santiago?",
+      "answer": "Los proyectos se encuentran en la parte de 'Portfolio'."
+    },
+    {
+      "question": "¿Dónde puedo ver los proyectos desplegados?",
+      "answer": "Los proyectos que estan desplegados se encuentran en la parte de 'Portfolio'. Estos a la hora de entrar en ellos, aparece un boton para poder verlo."
+    }
+  ]
+}
