@@ -25,11 +25,10 @@
 ## 📂 Estructura del Proyecto
 
 ```plaintext
-Corvex/
-├── requirements.txt     # Dependencias del proyecto
-├── main.py          # Punto de entrada del microservicio
-├── knowledge_base.json
-└── unanswered_questions.log
+requirements.txt     # Dependencias del proyecto
+main.py          # Punto de entrada del microservicio
+knowledge_base.json
+unanswered_questions.log
 README.md            # Documentación del proyecto
 ```
 
