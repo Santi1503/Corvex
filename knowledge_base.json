@@ -1,24 +1,96 @@
 {
   "FAQs": [
     {
-      "question": "¿Cuáles son los proyectos más importantes de Santiago?",
-      "answer": "Mis proyectos más importantes son su colección de proyectos de Python y su página de perfil profesional"
+      "question": "¿Cuáles son los proyectos más importantes?",
+      "answer": "Mis proyectos más importantes incluyen una colección de proyectos de Python, mi aplicación 'Packatrack' para seguimiento de paquetes, y mi página de perfil profesional. Puedes ver más detalles en el apartado de 'Portfolio'."
     },
     {
-      "question": "¿Cuál es la experiencia profesional de Santiago?",
-      "answer": "Santiago cuenta con experiencia en IT, desarrollo web y desarrollo de aplicaciones."
+      "question": "¿Qué proyectos destacas?",
+      "answer": "Algunos de mis proyectos destacados son la aplicación 'Miom' y 'Packatrack', ambos enfocados en mejorar la productividad y gestión de tareas. Puedes explorar todos en el apartado de 'Portfolio'."
     },
     {
-      "question": "¿Cómo puedo contactar a Santiago?",
-      "answer": "Puedes contactarme a través de mi página de LinkedIn o por correo electrónico."
+      "question": "¿Qué experiencia profesional tienes?",
+      "answer": "Tengo experiencia en IT, desarrollo web y desarrollo de aplicaciones móviles. He trabajado en proyectos enfocados en eficiencia y productividad."
     },
     {
-      "question": "¿Dónde puedo ver los proyectos de Santiago?",
-      "answer": "Los proyectos se encuentran en la parte de 'Portfolio'."
+      "question": "¿Cuál es tu experiencia laboral?",
+      "answer": "Mi experiencia incluye áreas de IT, administración de sistemas y desarrollo de software, especialmente en aplicaciones web y móviles."
     },
     {
-      "question": "¿Dónde puedo ver los proyectos desplegados?",
-      "answer": "Los proyectos que estan desplegados se encuentran en la parte de 'Portfolio'. Estos a la hora de entrar en ellos, aparece un boton para poder verlo."
+      "question": "¿Cómo puedo contactarlo?",
+      "answer": "Puedes contactarme en LinkedIn, a través de la sección 'Contact' en mi sitio web, o por correo electrónico en gomezdelatorre15@gmail.com."
+    },
+    {
+      "question": "¿Dónde puedo ver tus proyectos?",
+      "answer": "Puedes ver mis proyectos en la sección 'Portfolio' de mi sitio web. Ahí encontrarás enlaces a los proyectos desplegados."
+    },
+    {
+      "question": "¿Tienes proyectos desplegados?",
+      "answer": "Sí, en la sección 'Portfolio' puedes ver proyectos desplegados con enlaces directos para explorarlos."
+    },
+    {
+      "question": "¿Dónde está tu curriculum?",
+      "answer": "Mi currículum se encuentra en el apartado de 'Curriculum' en mi página, donde puedes visualizarlo y descargarlo."
+    },
+    {
+      "question": "¿Ofreces algún servicio?",
+      "answer": "Ofrezco servicios en desarrollo web, diseño de aplicaciones móviles y consultoría en IT. Más información en el apartado de 'Servicios'."
+    },
+    {
+      "question": "¿Qué tecnologías usas?",
+      "answer": "Trabajo con tecnologías como Python, React, Node.js, y Firebase, entre otras. Puedes ver más en la sección 'Skills' de mi perfil."
+    },
+    {
+      "question": "¿Cuál es tu especialidad?",
+      "answer": "Mi especialidad es el desarrollo web y la administración de sistemas IT. Me enfoco en crear soluciones eficientes y personalizadas para cada proyecto."
+    },
+    {
+      "question": "¿Qué es 'Packatrack'?",
+      "answer": "'Packatrack' es una aplicación para el seguimiento de entregas y gestión de paquetes. Fue diseñada para facilitar el control de entregas diarias."
+    },
+    {
+      "question": "¿Qué es 'Miom'?",
+      "answer": "'Miom' es una aplicación que ayuda a estudiantes a organizar sus tareas y exámenes, con un calendario y recordatorios. Está disponible en mi portafolio."
+    },
+    {
+      "question": "¿Qué habilidades tienes en desarrollo?",
+      "answer": "Tengo experiencia en desarrollo web con tecnologías como HTML, CSS, JavaScript, y frameworks como React y Node.js. También trabajo con Python en aplicaciones backend y con bases de datos como Firebase."
+    },
+    {
+      "question": "¿Qué te motiva a trabajar en tecnología?",
+      "answer": "La tecnología es una herramienta poderosa para mejorar la vida cotidiana y resolver problemas complejos. Mi motivación es crear soluciones innovadoras y eficientes que hagan la diferencia para los usuarios."
+    },
+    {
+      "question": "¿Cuál es tu objetivo profesional?",
+      "answer": "Mi objetivo es seguir desarrollándome en el campo del desarrollo de software, y eventualmente liderar proyectos de tecnología que impulsen la innovación y el crecimiento."
+    },
+    {
+      "question": "¿Qué proyectos tienes en mente?",
+      "answer": "Estoy interesado en proyectos de aplicaciones móviles con IA y en soluciones que mejoren la productividad y la organización personal. Mi meta es seguir desarrollando aplicaciones que sean útiles y fáciles de usar."
+    },
+    {
+      "question": "¿Cómo te mantienes actualizado en tecnología?",
+      "answer": "Me mantengo actualizado leyendo artículos, participando en comunidades de tecnología, y probando nuevas tecnologías en proyectos personales. También sigo tutoriales y cursos para mejorar continuamente."
+    },
+    {
+      "question": "¿Qué idiomas de programación manejas?",
+      "answer": "Manejo Python, JavaScript, C# y estoy aprendiendo Swift para desarrollo en iOS. Estos lenguajes me permiten trabajar tanto en frontend como en backend y en aplicaciones móviles."
+    },
+    {
+      "question": "¿Cuál es tu metodología de trabajo?",
+      "answer": "Trabajo siguiendo metodologías ágiles, como Scrum, para asegurar una planificación y ejecución efectiva. Me enfoco en tener metas claras, hacer pruebas continuas y entregar resultados de calidad."
+    },
+    {
+      "question": "¿Cómo puedo saber más sobre tus servicios?",
+      "answer": "Puedes revisar el apartado de 'Services' en mi página, donde detallo las áreas en las que ofrezco servicios como desarrollo web y aplicaciones móviles."
+    },
+    {
+      "question": "¿Cuál es tu disponibilidad para nuevos proyectos?",
+      "answer": "Actualmente, tengo disponibilidad para proyectos a corto y mediano plazo. Puedes contactarme directamente para discutir los detalles y ajustar el calendario."
+    },
+    {
+      "question": "¿Cómo manejas la seguridad en tus proyectos?",
+      "answer": "En cada proyecto, implemento prácticas de seguridad como autenticación robusta, encriptación de datos sensibles y revisión de código para minimizar riesgos de seguridad."
     }
   ]
 }

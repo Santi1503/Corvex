@@ -19,6 +19,7 @@ UNANSWERED_LOG_PATH = os.getenv("UNANSWERED_LOG_PATH", "unanswered_questions.log
 CRED_PATH = os.getenv("FIREBASE_CREDENTIALS_PATH")
 cred = credentials.Certificate(CRED_PATH)
 firebase_admin.initialize_app(cred)
+
 # Inicializar la aplicación de FastAPI
 app = FastAPI()
 
@@ -28,6 +29,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 # Inicializar spaCy para preprocesamiento en español
 nlp = spacy.load("es_core_news_sm")
 
+# Conectar a la base de datos de Firebase
 db = firestore.client()
 
 # Función de preprocesamiento para normalizar la pregunta del usuario
@@ -50,16 +52,16 @@ faq_embeddings = model.encode(questions, convert_to_tensor=True)
 class ChatRequest(BaseModel):
     question: str
 
-# Función para registrar preguntas sin respuesta en un archivo de log
+# Función para registrar preguntas sin respuesta en Firebase
 def log_unanswered_question(question):
-    # Crear una referencia a la collección
-    unanswered_questions_ref = db.collection("unansuered_questions")
+    # Crear una referencia a la colección en Firebase
+    unanswered_questions_ref = db.collection("unanswered_questions")
 
     # Agregar un nuevo documento con la pregunta y la fecha
-    unanswered_questions_ref.document().set({
-            "question": question,
-            "timestamp": datetime.now()
-        })
+    unanswered_questions_ref.add({
+        "question": question,
+        "timestamp": datetime.now()
+    })
 
 # Endpoint principal del chatbot
 @app.post("/corvex/chat")
@@ -101,9 +103,10 @@ async def add_to_knowledge_base(question: str, answer: str):
 async def root():
     return {"message": "Bienvenido a Corvex - Chatbot de Santiago"}
 
+# Endpoint para ver preguntas sin respuesta
 @app.get("/corvex/unanswered_questions")
 async def get_unanswered_questions():
-    unanswered_questions_ref = db.collection("unansuered_questions")
+    unanswered_questions_ref = db.collection("unanswered_questions")
     docs = unanswered_questions_ref.stream()
 
     unanswered_questions = [{"id": doc.id, **doc.to_dict()} for doc in docs]
