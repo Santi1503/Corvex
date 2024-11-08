@@ -3,4 +3,5 @@ uvicorn
 sentence-transformers
 spacy
 python-dotenv
+numpy==1.22.0
 es_core_news_sm @ https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.4.0/es_core_news_sm-3.4.0.tar.gz
